@@ -1,0 +1,74 @@
+@import "variables.scss";
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    color-scheme: light dark;
+    /* color: rgba(255, 255, 255, 0.87);*/
+    color: var(--ivory);
+    /* background-color: #242424; */
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-inline: 10px;
+}
+
+/* header */
+header,
+nav {
+    background-color: var(--olive-green);
+    color: var(--sage);
+    a {
+        color: inherit;
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: none;
+        display: block;
+        padding: 5px 12px;
+        &:hover {
+            background-color: var(--warm-brown);
+        }
+    }
+}
+header {
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    &.inline {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* main */
+main {
+    background-color: var(--ivory);
+    color: var(--olive-green);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    padding-inline: 10px;
+    margin-inline: auto;
+    gap: 10px;
+    .main-content {
+        flex: 5 1 65%;
+    }
+    aside {
+        flex: 0 1 40%;
+    }
+}
+
+.sidebar {
+    border-left: 1px solid var(--warm-brown);
+    padding-left: 1em;
+}
