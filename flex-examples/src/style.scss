@@ -1,4 +1,4 @@
-@import "variables.scss";
+@use "variables";
 
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -17,6 +17,7 @@
 
 /* header */
 header,
+footer,
 nav {
     background-color: var(--olive-green);
     color: var(--sage);
@@ -56,10 +57,11 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
     padding-inline: 10px;
     margin-inline: auto;
     gap: 10px;
+    max-inline-size: 1200px;
     .main-content {
         flex: 5 1 65%;
     }
@@ -71,4 +73,21 @@ main {
 .sidebar {
     border-left: 1px solid var(--warm-brown);
     padding-left: 1em;
+}
+
+/* Footer */
+footer .container {
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+@media (max-width: variables.$breakpoint-md) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid var(--warm-brown);
+    }
 }
