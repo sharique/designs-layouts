@@ -1,0 +1,112 @@
+:root {
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+.page {
+    background: var(--very-light-gray);
+    font-family: "Public Sans";
+    font-weight: 400;
+    /* height: 100vh; */
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 10px;
+    margin-inline: auto;
+    gap: 10px;
+    max-inline-size: 1200px;
+}
+
+.why {
+    background: var(--light-grayish-blue);
+}
+
+.request-button {
+    border-radius: 20px;
+    background: linear-gradient(
+        to right,
+        var(--lime-green),
+        var(--bright-cyan)
+    );
+    color: var(--white);
+    padding: 8px 12px;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* Header */
+header {
+    padding-top: 1em;
+}
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    li {
+        margin: 0;
+        padding: 10px;
+    }
+}
+/* Footer section */
+footer {
+    padding-top: 1em;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    a {
+        color: inherit;
+        :visited {
+            color: inherit;
+        }
+    }
+    .footer-menu {
+        column-count: 2;
+    }
+}
+/* Hero styling  */
+
+.hero {
+    .hero-right {
+        background-image: url("images/bg-intro-desktop.svg");
+    }
+    .hero-left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Features styling  */
+.feature {
+    flex: 0 1 100%;
+    padding: 1rem 0;
+    color: var(--grayish-blue);
+}
+
+/* Articles styling  */
+
+.card {
+    background: var(--white);
+    img {
+        /* aspect-ratio: 1/1; */
+        object-fit: cover;
+        height: 200px;
+        width: 240px;
+    }
+}
+.article-list {
+    gap: 1.2rem;
+    background-color: var(--very-light-gray);
+}
