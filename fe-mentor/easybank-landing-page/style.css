@@ -17,14 +17,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-inline: 10px;
+    /* padding-inline: 1rem; */
     margin-inline: auto;
-    gap: 10px;
+    gap: 1rem;
     max-inline-size: 1200px;
-}
-
-.why {
-    background: var(--light-grayish-blue);
 }
 
 .request-button {
@@ -35,16 +31,32 @@
         var(--bright-cyan)
     );
     color: var(--white);
-    padding: 8px 12px;
+    padding: 0.7rem 1.5rem;
     text-align: center;
     height: fit-content;
     width: fit-content;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+p {
+    color: var(--grayish-blue);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
 }
 /* Header */
 header {
@@ -54,9 +66,21 @@ header {
     display: flex;
     flex-direction: row;
     gap: 1em;
-    li {
+    a {
         margin: 0;
         padding: 10px;
+        font-weight: 500;
+        color: var(--grayish-blue);
+    }
+    a:hover {
+        border-bottom: 2px solid red;
+        color: var(--dark-blue);
+        border-image: linear-gradient(
+                to right,
+                var(--lime-green),
+                var(--bright-cyan)
+            )
+            1;
     }
 }
 /* Footer section */
@@ -64,18 +88,37 @@ footer {
     padding-top: 1em;
     background-color: var(--dark-blue);
     color: var(--white);
+    padding-block: 2rem;
     a {
         color: inherit;
+        padding: 0.6rem;
+        display: block;
         :visited {
             color: inherit;
         }
     }
+    a::before,
+    a:hover {
+        color: var(--lime-green);
+    }
     .footer-menu {
         column-count: 2;
     }
+    .social-links {
+        padding-top: 1rem;
+    }
+    .fab {
+        font-size: 1.4rem;
+    }
+    .last-section {
+        text-align: right;
+        padding-left: 200px;
+    }
+}
+.inline-menu {
+    display: inline-flex;
 }
 /* Hero styling  */
-
 .hero {
     .hero-right {
         background-image: url("images/bg-intro-desktop.svg");
@@ -85,6 +128,10 @@ footer {
         justify-content: center;
         flex-direction: column;
         gap: 10px;
+        flex: 1 1 45%;
+        p {
+            padding-block: 1rem;
+        }
     }
 }
 
@@ -92,21 +139,50 @@ footer {
 .feature {
     flex: 0 1 100%;
     padding: 1rem 0;
-    color: var(--grayish-blue);
 }
 
 /* Articles styling  */
-
 .card {
-    background: var(--white);
-    img {
-        /* aspect-ratio: 1/1; */
-        object-fit: cover;
-        height: 200px;
-        width: 240px;
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .author {
+        font-size: 0.8rem;
+        color: var(--grayish-blue);
+    }
+    .content {
+        color: var(--grayish-blue);
     }
 }
 .article-list {
     gap: 1.2rem;
     background-color: var(--very-light-gray);
+}
+.articles {
+    padding: 1rem 0;
+    img {
+        /* aspect-ratio: 1/1; */
+        object-fit: cover;
+        height: 240px;
+        width: 280px;
+    }
+    .card {
+        background: var(--white);
+    }
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+.why {
+    background: var(--light-grayish-blue);
+    .card-body {
+        padding-top: 1rem;
+    }
+}
+.section-heading.wrapper {
+    padding: 2rem 0;
+    flex-direction: column;
 }
