@@ -60,7 +60,7 @@ h2 {
 }
 /* Header */
 header {
-    padding-top: 1em;
+    padding-block: 1em;
 }
 .menu ul {
     display: flex;
@@ -140,6 +140,9 @@ footer {
     flex: 0 1 100%;
     padding: 1rem 0;
 }
+.features {
+    gap: 2rem;
+}
 
 /* Articles styling  */
 .card {
@@ -174,6 +177,9 @@ footer {
     .card-body {
         padding: 1rem;
     }
+    h3:hover {
+        color: var(--lime-green);
+    }
 }
 
 .why {
@@ -185,4 +191,46 @@ footer {
 .section-heading.wrapper {
     padding: 2rem 0;
     flex-direction: column;
+}
+
+/* Mobile styling  */
+@media only screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        .hero-right {
+            flex: 1 1 100%;
+            padding: 1rem;
+        }
+        .hero-left {
+            flex: 1 1 100%;
+            padding: 1rem;
+        }
+    }
+
+    .feature {
+        flex: 1 1 100%;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        img {
+            display: inline-block;
+        }
+    }
+
+    .why {
+        flex-direction: column;
+        text-align: center;
+    }
+    .wrapper {
+        padding-inline: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .last-section {
+        padding: 0;
+    }
+    .footer-menu {
+        column-count: 1;
+    }
 }
