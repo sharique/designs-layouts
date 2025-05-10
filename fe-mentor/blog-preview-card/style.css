@@ -1,0 +1,18 @@
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: #fff;
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+}
+body {
+    background-color: var(--yellow);
+    justify-content: center;
+    align-items: baseline;
+    min-height: 110vh;
+}
+.wrapper {
+    margin-block: auto;
+    background-color: var(--white);
+    padding: 10px;
+    border: 1px solid black;
+}
